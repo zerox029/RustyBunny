@@ -1,0 +1,1 @@
+Initially a project to learn Rust, following [this facebook dev page](https://developers.facebook.com/blog/post/2020/06/03/build-smart-bookmarking-tool-rust-rocket/) but I ended up adding more things
