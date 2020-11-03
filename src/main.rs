@@ -14,6 +14,7 @@ fn search(cmd: String) -> Redirect {
         "tw" => utils::twitter::construct_twitter_url(&cmd),
         "gh" => utils::github::construct_github_url(&cmd),
         "cal" => utils::calendar::construct_calendar_url(&cmd),
+        "nh" => utils::culture::construct_culture_url(&cmd),
         _ => utils::google::construct_google_search_url(&cmd),
     };
 
