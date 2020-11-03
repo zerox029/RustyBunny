@@ -2,7 +2,7 @@ use chrono::prelude::*;
 
 pub fn construct_calendar_url(query: &str) -> String {
   if query == "cal" {
-    let google_calendar = "https://twitter.com";
+    let google_calendar = "https://calendar.google.com/calendar/u/0/r/";
 
     google_calendar.to_string()
   } else {
