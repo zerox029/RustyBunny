@@ -26,41 +26,26 @@ mod tests {
   use super::*;
 
   #[test]
-  fn test_construct_twitter_url() {
-      let fake_query = "tw";
-      assert_eq!(construct_twitter_url(fake_query), 
-      "https://twitter.com");
+  fn test_construct_culture_by_id() {
+      let id = "177013";
+      assert_eq!(construct_culture_by_id(id), "https://nhentai.net/g/177013/");
   }
 
   #[test]
-  fn test_construct_twitter_url_query() {
-      let fake_query = "tw hello world";
-      assert_eq!(construct_twitter_url(fake_query),     
-      "https://twitter.com/search?q=hello%20world");
+  fn test_construct_culture_by_tags() {
+      let id = "love live";
+      assert_eq!(construct_culture_by_tags(id), "https://nhentai.net/search/?q=love+live");
   }
 
   #[test]
-  fn test_construct_twitter_url_profile() {
-      let fake_query = "tw @fbOpenSource";
-      assert_eq!(construct_twitter_url(fake_query), 
-      "https://twitter.com/fbOpenSource");
+  fn test_construct_culture_with_tags() {
+      let tags = "nh love live";
+      assert_eq!(construct_culture_url(tags), "https://nhentai.net/search/?q=love+live");
   }
 
   #[test]
-  fn test_construct_twitter_profile_url() {
-      let fake_profile = "jsjoeio";
-      assert_eq!(
-          construct_twitter_profile_url(fake_profile),
-          "https://twitter.com/jsjoeio"
-      );
-  }
-
-  #[test]
-  fn test_construct_twitter_search_url() {
-      let fake_query = "hello world";
-      assert_eq!(
-          construct_twitter_search_url(fake_query),
-          "https://twitter.com/search?q=hello%20world"
-      );
+  fn test_construct_culture_with_id() {
+      let id = "nh 177013";
+      assert_eq!(construct_culture_url(id), "https://nhentai.net/g/177013/");
   }
 }
